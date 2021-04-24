@@ -2,10 +2,7 @@ public class strStr {
     public static void main(String[] args) {
         String haystack = "mississippi";//mississippi
         String needle = "issip";//issip
-        char hay[] = haystack.toCharArray();
-        char need[] = needle.toCharArray();
         System.out.println(strStr(haystack,needle));
-
     }
 
     public static int strStr(String haystack, String needle) {
@@ -31,7 +28,7 @@ public class strStr {
                                 break;
                             }
                         }
-                        if (flag2 == true) {
+                        if (flag2) {
                             return i;
                         }
                     }
