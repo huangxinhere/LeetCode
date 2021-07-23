@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-int pick=2;
+int pick=3;
 
 int main()
 {
-    printf("%d \n",guessNum(2));
+    printf("%d \n",guessNum(3));
     return 0;
 }
 int guessNum(int n)
 {
-    int a[n],i,low=0,high=n-1,mid;
-    for(i=0;i<n;i++)
-        a[i]=i+1;
+    int low=1,high=n,mid;
+    /*for(i=0;i<n;i++)
+        a[i]=i+1;*/
     while(1)
     {
         mid=(high+low)/2;
-        if(guess(a[mid])==1&&(mid==n-2)) return a[mid+1];
-        if(guess(a[mid])==-1)
-            high=mid;
-        else if(guess(a[mid])==1)
-            low=mid;
-        else if(guess(a[mid])==0)
-            return a[mid];
+        //if(guess(mid)==1&&(mid==n-2)) return a[mid+1];
+        if(guess(mid)==-1)
+            high=mid-1;//-1?
+        else if(guess(mid)==1)
+            low=mid+1;
+        else if(guess(mid)==0)
+            return mid;
     }
 }
 
