@@ -1,3 +1,5 @@
+package LinkText;
+
 public class s_21Ans {
     public static void main(String args[]){
 
